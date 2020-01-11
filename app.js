@@ -1,12 +1,13 @@
 const wymiar = 8;
 
 let table = document.getElementById("myTable");
+let wlaczona = false;
 
 
 function myCreateFunction() {
 for (var i = 0; i <wymiar; i++) {
   var row = table.insertRow(i);
-  for (var x = wymiar; x >0; x--) {
+  for (var x = wymiar-1; x >-1; x--) {
     var cell = row.insertCell(0);
     cell.id=i + 'x' + x;
     cell.innerHTML = "0";
@@ -27,8 +28,4 @@ for (var i = 0; i <wymiar; i++) {
 
   }
 }
-}
-
-function myDeleteFunction() {
-  document.getElementById("myTable").deleteRow(0);
 }
